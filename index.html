@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>كلية علوم ذوي الإعاقة والتأهيل</title>
+  <meta name="description" content="موقع الكلية الرسمي — برامج، خدمات، أخبار، هيئة تدريس" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="#home">
+        <div class="logo">DR</div>
+        <div class="brand-text">كلية علوم ذوي الإعاقة والتأهيل</div>
+      </a>
+      <button id="menuToggle" class="hamburger" aria-label="قائمة">≡</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">عن الكلية</a></li>
+        <li><a href="#programs">البرامج</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#news">الأخبار</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <!-- decorative animated SVG background -->
+    <svg class="hero-bg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0" stop-color="#1e40af"/>
+          <stop offset="1" stop-color="#06b6d4"/>
+        </linearGradient>
+      </defs>
+      <path id="blob" fill="url(#g1)" opacity="0.95" d="M421,34Q519,68,559,153Q599,238,548,300Q497,362,401,379Q305,396,233,353Q161,310,126,236Q91,162,126,96Q161,30,256,23Q351,16,421,34Z"/>
+    </svg>
+
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1 class="hero-title">
+          كلية علوم ذوي الإعاقة والتأهيل
+        </h1>
+        <p class="hero-sub">
+          نؤهل كوادر متخصصة في التأهيل، البحث العلمي، وخدمة المجتمع — برامج معتمدة وتدريب عملي.
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#programs">استكشف البرامج</a>
+          <a class="btn outline" href="#contact">تواصل معنا</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card-3d">
+          <img src="assets/logo.svg" alt="Logo" class="card-logo"/>
+          <div class="card-info">
+            <h3>برنامج متميز</h3>
+            <p>بكالوريوس العلاج الوظيفي — تدريب عملي وعلمي</p>
+            <div class="tiny-cta"><a href="#programs">المزيد</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">عن الكلية</h2>
+      <p class="section-sub">رؤية واضحة، رسالة عملية، وأهداف قابلة للقياس.</p>
+      <div class="grid3">
+        <article class="card">
+          <h3>الرؤية</h3>
+          <p>الريادة الإقليمية في علوم التأهيل وخدمة المجتمع.</p>
+        </article>
+        <article class="card">
+          <h3>الرسالة</h3>
+          <p>إعداد خريجين متميزين علميًا وعمليًا.</p>
+        </article>
+        <article class="card">
+          <h3>الأهداف</h3>
+          <p>تطوير برامج، بحوث تطبيقية، وشراكات مجتمعية.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs" class="section alt">
+    <div class="container">
+      <h2 class="section-title">البرامج الأكاديمية</h2>
+      <p class="section-sub">خطط دراسية حديثة ومتكاملة.</p>
+      <div class="grid3" id="programsGrid"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">خدماتنا</h2>
+      <div class="grid3" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" class="section alt">
+    <div class="container">
+      <h2 class="section-title">الأخبار والفعاليات</h2>
+      <div class="grid3" id="newsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container grid2">
+      <div class="card">
+        <h3>بيانات الاتصال</h3>
+        <ul class="list">
+          <li>العنوان: حرم الجامعة — (اكتب العنوان)</li>
+          <li>هاتف: 000000000</li>
+          <li>بريد: example@univ.edu</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>تواصل معنا</h3>
+        <form id="contactForm">
+          <label>الاسم <input type="text" name="name" required /></label>
+          <label>البريد <input type="email" name="email" required /></label>
+          <label>الرسالة <textarea name="message" rows="4" required></textarea></label>
+          <button class="btn primary" type="submit">إرسال</button>
+          <p id="formMsg" class="muted"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>كلية علوم ذوي الإعاقة والتأهيل</strong>
+        <p class="muted">جامعة — (ضع اسم الجامعة). جميع الحقوق محفوظة.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul class="list"><li><a href="#programs">البرامج</a></li><li><a href="#news">الأخبار</a></li></ul>
+      </div>
+      <div>
+        <h4>تواصل</h4>
+        <ul class="list"><li>example@univ.edu</li><li>000000000</li></ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
